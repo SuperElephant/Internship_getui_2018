@@ -1,6 +1,6 @@
 /**
  * @author Chao Xiang
- * @Date 2018-07
+ * @date 2018-07
  * <p>
  * Fire name: NameConverter.java
  * It is hive UDF used for convert the pkg_name into app_name base on the given dic.
