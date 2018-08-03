@@ -5,6 +5,16 @@
  * Fire name: NameConverter.java
  * It is hive UDF used for convert the pkg_name into app_name base on the given dic.
  *
+ * The implementation can be divided as dict assembling and  pkg_name look up
+ *
+ * 1. Considering the number of query to dic will be significant. We use HashMao<Text, Text> 
+ * which directly accept org.apache.hadoop.io.Text as key and value.
+ * - use BufferReader read dict item from text file line by line
+ * - split read line into pieces 
+ * - turn String into Text and put it into MashMap
+ * 
+ * 2. Use MashMap.get directly (if pkg_name or app_name not exist return NULL)
+ *
  * Notice:
  *  Dict path is set as 'System.getProperty("user.dir")+"/raw_dict"'
  *  Only support Text (single pkg name) --> Text (array is not supported), presently.
