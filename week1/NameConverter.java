@@ -37,7 +37,7 @@ import java.util.HashMap;
 public class NameConverter extends UDF {
 
     private final String DICT_PATH = System.getProperty("user.dir") + "/raw_dict";
-    // private final String DICT_PATH = "/Users/chaoxiang/IdeaProjects/testa/src/main/resources/raw_dict";
+    // private final String DICT_PATH = "~/IdeaProjects/testa/src/main/resources/raw_dict";
     // private final String DICT_PATH = NameConverter.class.getResource("/").toString();
 
     private final String SEPARATOR = "\\|";
@@ -53,7 +53,7 @@ public class NameConverter extends UDF {
     /**
      * Generate a dict for further use
      * dict is  read from {@link #DICT_PATH}
-     * @return HashMap<Text ,   Text> dict
+     * @return HashMap\<Text, Text\> dict
      */
     private HashMap<Text, Text> importDict() {
         String line = "";
