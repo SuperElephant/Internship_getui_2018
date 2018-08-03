@@ -74,8 +74,8 @@ if __name__ == '__main__':
     test only for --without pipline--
     """
     spark = SparkSession.builder.getOrCreate()
-    data0 = formating("/Users/chaoxiang/Desktop/sample_data/20180525_ml_data_0.txt", spark)
-    data1 = formating("/Users/chaoxiang/Desktop/sample_data/20180525_ml_data_1.txt", spark)
+    data0 = formating("~/Desktop/sample_data/20180525_ml_data_0.txt", spark)
+    data1 = formating("~/Desktop/sample_data/20180525_ml_data_1.txt", spark)
     new_df = mergeWithTag(data0, data1, 0, 1)
     new_df = count_vectorize(new_df)
     new_df.show(truncate=False)
