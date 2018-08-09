@@ -44,7 +44,7 @@ def data_preprocess():
     for i in range(len(lines0)):
         lines0[i] = lines0[i].split('|', 2)[2].strip()
     for i in range(len(lines1)):
-        lines1[i] = lines0[i].split('|', 2)[2].strip()
+        lines1[i] = lines1[i].split('|', 2)[2].strip()
 
     all_lines = lines0 + lines1
 
